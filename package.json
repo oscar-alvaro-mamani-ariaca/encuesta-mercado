@@ -1,32 +1,50 @@
 {
-      "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject"
-      },
-      "dependencies": {
-        "react": "^18.0.0",
-        "react-dom": "^18.0.0",
-        "react-scripts": "^5.0.0",
-        "postcss": "^8",
-        "tailwindcss": "^3.4.1",
-        "autoprefixer": "^10.0.0",
-        "tailwind-merge": "^2.4.0",
-        "tailwindcss-animate": "^1.0.7"
-      },
-      "main": "/index.js",
-      "devDependencies": {},
-      "browserslist": {
-        "production": [
-          ">0.2%",
-          "not dead",
-          "not op_mini all"
-        ],
-        "development": [
-          "last 1 chrome version",
-          "last 1 firefox version",
-          "last 1 safari version"
-        ]
-      }
-    }
+  "name": "encuesta-mercado",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "16.x"
+  },
+  "scripts": {
+    "start": "node src/backend/server.js",
+    "build": "react-scripts build",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "react-scripts start",
+    "server": "node src/backend/server.js",
+    "test": "react-scripts test"
+  },
+  "dependencies": {
+    // Backend
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    
+    // Frontend (React)
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    
+    // TailwindCSS
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.1",
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
